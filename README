@@ -27,7 +27,7 @@ To install this Trac Plugin:
         sudo python setup.py install
 
     4. Configure Trac by editing your trac.ini
-        
+
         [components]
         github.* = enabled
 
@@ -38,11 +38,11 @@ To install this Trac Plugin:
 
         #Optional - perform a fetch on the local git repository
         autofetch = true
-        
+
     5. Go to the Admin page for your project on GitHub. Then select the services tab.
         Under the: Post-Receive URLs
         Place a link to your Trac repository, in a format like this:
-        
+
         http://yourdomian.com/projects/projectname/github/APITOKEN
 
         You can get your GitHub API token from your accounts page.
@@ -59,13 +59,13 @@ The commit hook is designed to close or mark tickets that are attached to a comm
 It searches commit messages for text in the form of:
     command #1
     command #1, #2
-    command #1 & #2 
+    command #1 & #2
     command #1 and #2
 
 Instead of the short-hand syntax "#1", "ticket:1" can be used as well, e.g.:
     command ticket:1
     command ticket:1, ticket:2
-    command ticket:1 & ticket:2 
+    command ticket:1 & ticket:2
     command ticket:1 and ticket:2
 
 ======================================================================================================
